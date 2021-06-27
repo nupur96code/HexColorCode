@@ -1,0 +1,11 @@
+<div class="element-left container">
+    <div class="center">
+        <form [formGroup]="ColourForm" (ngSubmit)="onSubmit()">
+            <label>Hex Code : </label>
+            <input type="text" name="ColorHexCode" formControlName="ColorHexCode">
+            <div class="alert" [hidden]="ColourForm.controls.ColorHexCode.valid || ColourForm.controls.ColorHexCode.untouched">
+                Invalid hex code
+            </div>
+        </form>
+    </div>
+</div>
